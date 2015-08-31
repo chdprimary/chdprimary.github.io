@@ -59,27 +59,6 @@ table {
 	===============
 */
 
-/* glyphicon-menu-down without Bootstrap.css */
-@font-face {
-  font-family: 'Glyphicons Halflings';
-
-  src: url('./fonts/glyphicons-halflings-regular.eot');
-  src: url('./fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('./fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('./fonts/glyphicons-halflings-regular.woff') format('woff'), url('./fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('./fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
-.glyphicon {
-	position: relative;
-	top: 1px;
-	display: inline-block;
-	font-family: 'Glyphicons Halflings';
-	font-style: normal;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-.glyphicon-menu-down:before {
-	content: "\e259";
-}
-
 *,
 *:before,
 *:after {
@@ -102,52 +81,58 @@ body {
 	font-family: "Open Sans", Arial, sans-serif;
 }
 
+/*
+	============
+	Header
+	============
+ */
+
 .header {
 	display: flex;
 	flex-direction: row;
 	-webkit-justify-content: space-between;
 	position: absolute;
-
 	width: 100%;
 	padding: 30px;
 	
+	color: #F9F4DA;
 	opacity: 0.4;
-
-	transition: opacity 1s;
+	transition: opacity 0.2s;
 }
 
 .header:hover {
-	opacity:1;
-	filter:alpha(opacity=100);
+	opacity: 1;
 }
 
-.header__namegram {
+#header__namegram {
+	cursor: pointer;
 	max-height: 100px;
 }
 
-.header__nav {
-	position: relative;
-	text-align: right;
-}
-
-.header__nav ul {
+.header__nav__list {
 	margin-top: 41px;
 }
 
-.header__nav li {
+.header__nav__list li {
 	display: inline-block;
 	text-transform: uppercase;
 	margin-left: 10px;
 	margin-right: 10px;
 }
 
-.header__nav a {
-	color: white;
+.header__nav__list a {
+	color: inherit;
 	text-decoration: none;
 }
 
-.top-section {
-	/* Sets main background image -- better way than using body? <img>? */
+/*
+	============
+	Main Section
+	============
+ */
+
+.main-section {
+	/* Sets main background image */
 	width: 100%;
 	height: 100%;
 	background: url(../images/background-1.jpg) center center no-repeat;
@@ -157,26 +142,60 @@ body {
 	background-size: cover;
 }
 
-.projects-section {
+/*
+	============
+	Fold Indicator
+	============
+ */
+
+.fold-indicator-container {
+	position: absolute;
+	top:800px;
+	right:0;
+	bottom:0;
+	left:25px;
+	margin: auto;
+	width: 42px;
+	height: 135px;
+
+	color: #F9F4DA;
+}
+
+.fold-indicator-container .fa-chevron-circle-down {
+	font-size: 3em;
+}
+
+.fold-indicator-container .fa-circle {
+	position: absolute;
+	left: 14px;
+}
+.fold-indicator-container .fa-circle-1 {
+	top: 55px;
+}
+.fold-indicator-container .fa-circle-2 {
+	top: 85px;
+}
+.fold-indicator-container .fa-circle-3 {
+	top: 115px;
+}
+
+/*
+	============
+	Aboutme Section
+	============
+ */
+
+.aboutme-section {
 	position: relative;
-/*	top: 980px;*/
 	background: #FBF7DD;
 	height: 700px;
 }
 
-.glyphicon-menu-down-container {
-	position: absolute;
-	top:865px;
-	right:-80px;
-	bottom:0;
-	left:0;
-	margin: auto;
-	width: 100px;
-	height: 100px;
-
-	color: #F9F4DA;
-	font-size: 3em;
-}
+/*
+	============
+	Whitespace Tracker
+	============
+ */
 
 /** {
   background: #000 !important;
