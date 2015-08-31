@@ -4,35 +4,48 @@
 	<meta charset="UTF-8">
 	<title>Christian Dean</title>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
-	<!-- Open Sans is currently slowest thing on website -->
-	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,300italic' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- 
 	<script src="//use.typekit.net/gzg6fhe.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	-->
 </head>
 <body>
-	<header class="header">
-		<img id="header__namegram" src="assets/images/namegram.png" />
-		<nav>
-			<!-- Don't wanna use numbers, figure another way to indicate position / progress -->
-			<ul class="header__nav__list">
-				<li><a href="#me">1. Me</a></li>
-				<li><a href="#projects">2. Projects</a></li>
-				<li><a href="#experience">3. Experience</a></li>
-				<li><a href="#education">4. Education</a></li>
-				<li><a href="#skills">5. Skills</a></li>
-				<li><a href="#resume">6. Resume</a></li>
-				<li><a href="#contact">7. Contact</a></li>
-			</ul>
-		</nav>
-	</header>
 	<section class="main-section">
+		<header class="namegram-header">
+			<img id="namegram-header__namegram" src="assets/images/namegram.png" />
+		</header>
+		<aside class="informational-aside">
+			<header class="text-container informational-aside__info">
+				<!-- <p class="lead-text">Hello fellow internet person!</p> -->
+				<h1 class="lead-text"><strong>Christian Dean &mdash;</strong><br><strong class="subtext">Frontend Developer.</strong></h1>
+				<nav>
+					<!-- Don't wanna use numbers, figure another way to indicate position / progress -->
+					<ul class="">
+						<li><a href="#me">Me</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#experience">Experience</a></li>
+						<li><a href="#education">Education</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#resume">Resume</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			<img class="informational-aside__personal-photo" src="./assets/images/christiandean1.png" />
+			<div class="external-link-group">
+				<i class="fa fa-github-square"></i>
+				<i class="fa fa-linkedin-square"></i><!--
+				--><br><!--
+				--><i class="fa fa-twitter-square"></i>
+				<i class="fa fa-envelope-square"></i>
+			</div>
+		</aside>
 		<div class="fold-indicator-container">
 			<i class="fa fa-chevron-circle-down"></i>
 			<i class="fa fa-circle fa-circle-1"></i>
 			<i class="fa fa-circle fa-circle-2"></i>
 			<i class="fa fa-circle fa-circle-3"></i>
-			<!-- <span class="glyphicon glyphicon-menu-down"></span> -->
 		</div>
 	</section>
 	<section class="aboutme-section">
@@ -54,7 +67,7 @@
 		
 	</section>
 	<script type="text/javascript">
-		var namegram = document.querySelectorAll('#header__namegram');
+		var namegram = document.querySelectorAll('#namegram-header__namegram');
 
 		namegram[0].addEventListener('click', function(e) {
 			document.location = "#top";

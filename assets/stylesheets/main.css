@@ -1,4 +1,4 @@
-/* 
+ 
 	===============
 	From meyerweb.com 
 	===============
@@ -70,59 +70,111 @@ table {
 }
 
 html {
-	/* Forces a scroll bar */
-	overflow-y: scroll;
-
 	height: 100%;
 }
 
 body {
 	height: 100%;
 	font-family: Arial, sans-serif;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.text-container * {
+	margin: 0;
+	border: 0;
+	padding: 0;
 }
 
 /*
 	============
-	Header
+	Namegram Aside
 	============
  */
 
-.header {
-	display: flex;
-	flex-direction: row;
-	-webkit-justify-content: space-between;
-	position: absolute;
-	width: 100%;
-	padding: 30px;
-	
-	color: #F9F4DA;
+.namegram-header {
+	width: 80%;
+
 	opacity: 0.4;
 	transition: opacity 0.2s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-.header:hover {
+.namegram-header:hover {
 	opacity: 1;
 }
 
-#header__namegram {
+#namegram-header__namegram {
+/*	position: absolute;
+	top: 50%;
+	margin-top: -105px;
+	padding-left: 20px;*/
+	padding: 20px;
+	max-height: 150px;
+	
 	cursor: pointer;
-	max-height: 100px;
 }
 
-.header__nav__list {
-	margin-top: 41px;
+/*
+	============
+	Informational Aside
+	============
+ */
+
+.informational-aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: absolute;
+	top:0;
+	right:0;
+	width: 20%;
+	height: 100%;
+	background: #FFF;
+	padding: 54px;
+	border-left: 1px solid #AAA;	
 }
 
-.header__nav__list li {
-	display: inline-block;
+.informational-aside__personal-photo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	max-height: 200px;
+}
+
+.informational-aside__info {
+	text-align: center;
+}
+
+.informational-aside ul {
+	padding: 0;
 	text-transform: uppercase;
-	margin-left: 10px;
-	margin-right: 10px;
 }
 
-.header__nav__list a {
-	color: inherit;
-	text-decoration: none;
+.lead-text {
+	margin-bottom: 40px;
+	text-align: justify;
+	font-size: 60px;
+	font-family: "adobe-caslon-pro";
+}
+
+.lead-text .subtext {
+	color: gray;
+}
+
+.external-link-group {
+	margin-top: 40px;
+	font-size: 3em;
+	text-align: center;
 }
 
 /*
@@ -133,7 +185,7 @@ body {
 
 .main-section {
 	/* Sets main background image */
-	width: 100%;
+	width: 80%;
 	height: 100%;
 	background: url(../images/background-1.jpg) center center no-repeat;
 	-webkit-background-size: cover;
@@ -151,9 +203,9 @@ body {
 .fold-indicator-container {
 	position: absolute;
 	top:800px;
-	right:0;
+	right:19%;
 	bottom:0;
-	left:25px;
+	left:0;
 	margin: auto;
 	width: 42px;
 	height: 135px;
@@ -192,10 +244,11 @@ body {
 }
 
 .aboutme-section h1 {
-	font-size: 200px;
-	text-align: right;
+	margin: 0;
 	padding-right: 100px;
 	padding-top: 200px;
+	font-size: 200px;
+	text-align: right;
 	font-family: "adobe-caslon-pro";
 }
 
@@ -209,4 +262,5 @@ body {
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
-}*/
+}
+*/
