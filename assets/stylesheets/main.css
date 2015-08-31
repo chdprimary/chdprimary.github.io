@@ -192,6 +192,10 @@ body {
 }
 
 .aboutme-section h1 {
+	font-size: 200px;
+	text-align: right;
+	padding-right: 100px;
+	padding-top: 200px;
 	font-family: "adobe-caslon-pro";
 }
 
