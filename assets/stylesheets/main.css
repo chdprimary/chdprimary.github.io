@@ -78,7 +78,7 @@ html {
 
 body {
 	height: 100%;
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 /*
@@ -189,6 +189,10 @@ body {
 	position: relative;
 	background: #FBF7DD;
 	height: 700px;
+}
+
+.aboutme-section h1 {
+	font-family: "adobe-caslon-pro";
 }
 
 /*
