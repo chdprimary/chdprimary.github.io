@@ -75,7 +75,7 @@ html {
 
 body {
 	height: 100%;
-	font-family: Arial, sans-serif;
+	font-family: "Times New Roman", serif;
 	margin: 0;
 }
 
@@ -113,10 +113,6 @@ a {
 }
 
 #namegram-header__namegram {
-/*	position: absolute;
-	top: 50%;
-	margin-top: -105px;
-	padding-left: 20px;*/
 	padding: 20px;
 	max-height: 150px;
 	
@@ -138,7 +134,8 @@ a {
 	right:0;
 	width: 20%;
 	height: 100%;
-	background: #FFF;
+	/* Cosmic Latte! */
+	background: #FFF8E7;
 	padding: 54px;
 	border-left: 1px solid #AAA;	
 }
@@ -160,15 +157,41 @@ a {
 	text-transform: uppercase;
 }
 
-.lead-text {
-	margin-bottom: 40px;
-	text-align: justify;
-	font-size: 60px;
-	font-family: "adobe-caslon-pro";
+.main-nav__list {
+	line-height: 18px;
 }
 
-.lead-text .subtext {
+.main-nav__list a {
 	color: gray;
+	-webkit-transition: color 0.2s;
+	-moz-transition: color 0.2s;
+	-o-transition: color 0.2s;
+	-ms-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.main-nav__list a:hover {
+	color: black;
+}
+
+.header-text {
+	margin-bottom: 20px;
+	text-align: justify;
+	font-size: 60px;
+	font-family: "adobe-caslon-pro", "Times New Roman", serif;
+}
+
+.header-text .subtext {
+	color: gray;
+}
+
+.subheader-text {
+	font-size: 34px;
+	font-family: "Adobe Caslon Pro", "Times New Roman", serif;
+}
+
+.main-nav {
+	margin-top: 40px;
 }
 
 .external-link-group {
@@ -239,18 +262,33 @@ a {
 
 .aboutme-section {
 	position: relative;
-	background: #FBF7DD;
-	height: 700px;
+	background: #FFF8E7;
+	height: 956px;
+}
+
+.aboutme-image {
+	width: 50%;
+	float: left;
+}
+
+.aboutme-image img {
+	width: 100%;
+}
+
+.aboutme-text {
+	width: 50%;
+	float: right;
 }
 
 .aboutme-section h1 {
 	margin: 0;
 	padding-right: 100px;
-	padding-top: 200px;
-	font-size: 200px;
+	padding-top: 75px;
+	font-size: 150px;
 	text-align: right;
-	font-family: "adobe-caslon-pro";
+	font-family: "adobe-caslon-pro", "Times New Roman", serif;
 }
+
 
 /*
 	============
