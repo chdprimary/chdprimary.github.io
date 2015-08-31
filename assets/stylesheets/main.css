@@ -110,6 +110,15 @@ body {
 
 	width: 100%;
 	padding: 30px;
+	
+	opacity: 0.4;
+
+	transition: opacity 1s;
+}
+
+.header:hover {
+	opacity:1;
+	filter:alpha(opacity=100);
 }
 
 .header__namegram {
