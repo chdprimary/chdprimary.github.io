@@ -352,6 +352,11 @@ p:selection {
 	min-height: 50vw;
 }
 
+.projects-section a {
+	text-decoration: none;
+	color: inherit;
+}
+
 .project-flexrow {
 	display: flex;
 	flex-direction: row;
@@ -442,6 +447,11 @@ p:selection {
 
 #projects-section__left__bank:hover,#projects-section__left__advising:hover,#projects-section__aa:hover {
 	cursor: pointer;
+}
+
+.projects-section__aa.project-info:hover {
+	-webkit-filter: brightness(0.8);
+	background-size: 110em;
 }
 
 /*
