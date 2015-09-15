@@ -1,8 +1,3 @@
- 
-	===============
-	From meyerweb.com 
-	===============
-*/
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -53,6 +48,16 @@ table {
 	border-spacing: 0;
 }
 
+/*
+	===============
+	My Resources
+	===============
+
+	GREAT resource from W3 on centering things:
+		http://www.w3.org/Style/Examples/007/center.en.html
+*/
+	
+
 /* 
 	===============
 	My CSS 
@@ -79,6 +84,29 @@ body {
 	margin: 0;
 }
 
+p {
+	line-height: 1.3;
+}
+
+p a {
+	text-decoration: none;
+	color: #747A90;
+	font-weight: bold;
+	-webkit-transition: color 0.2s;
+	-moz-transition: color 0.2s;
+	-o-transition: color 0.2s;
+	-ms-transition: color 0.2s;
+	transition: color 0.2s;	
+}
+
+p a:hover {
+	color: #6082B6;
+}
+
+p:selection {
+	background: gray;
+}
+
 /*
 	============
 	Main Section
@@ -89,11 +117,13 @@ body {
 	/* Sets main background image */
 	width: 80%;
 	height: 100%;
-	background: url(../images/background-1.jpg) center center no-repeat;
+	/* Image taken from Unsplash under Creative Commons Zero license -- https://unsplash.com/license */
+	background: url(../images/main-background.jpg) center center no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	border-right: 1px solid #AAA;
 }
 
 /*
@@ -103,7 +133,7 @@ body {
  */
 
 .namegram-header {
-	width: 80%;
+	width: 100%;
 
 	opacity: 0.4;
 	transition: opacity 0.2s;
@@ -138,12 +168,12 @@ body {
 	position: absolute;
 	top:0;
 	right:0;
-	width: 20%;
+	width: 24em;
 	height: 100%;
 	/* Cosmic Latte! */
 	background: #FFF8E7;
 	padding: 54px;
-	border-left: 1px solid #AAA;	
+	overflow: hidden;
 }
 
 
@@ -206,8 +236,14 @@ body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 20px;
+	margin-top: 40px;
 	max-height: 200px;
+}
+
+.informational-aside__personal-photo__border-effects {
+	border-radius: 50%;
+	border: 2px solid white;
+	box-shadow: gray 0px 0px 20px;
 }
 
 .external-link-group {
@@ -237,7 +273,7 @@ body {
 
 .fold-indicator-container {
 	position: absolute;
-	top:800px;
+	top:80%;
 	right:19%;
 	bottom:0;
 	left:0;
@@ -284,39 +320,134 @@ body {
  */
 
 .aboutme-section {
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	background: #FFF8E7;
-	height: 956px;
-}
-
-.aboutme-image {
-	width: 50%;
-	float: left;
-}
-
-.aboutme-image img {
-	width: 100%;
-}
-
-.aboutme-text {
-	width: 50%;
-	float: right;
+	min-height: 100%;
+	padding: 10%;
 }
 
 .aboutme-section h1 {
 	margin: 0;
-	padding-right: 135px;
-	padding-top: 75px;
-	font-size: 150px;
-	text-align: right;
+	font-size: 4em;
+	text-align: center;
 	font-family: "adobe-caslon-pro", "Times New Roman", serif;
 }
 
+.aboutme-section p {
+	font-size: 1.5em;
+	text-align: center;
+}
 
 /*
 	============
-	Whitespace Tracker
+	Projects Section
 	============
+ */
+
+.projects-section {
+	display: flex;
+	flex-direction: row;
+	min-height: 50vw;
+}
+
+.project-flexrow {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+.project-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	height: 100%;
+	margin: auto;
+	padding: 5%;
+	text-align: center;
+}
+
+.project-info h1 {
+	font-size: 2em;
+}
+
+.project-info h2 {
+	font-size: 1em;
+}
+
+.project-info i {
+	color: #1B94EF;
+}
+
+.project-overlay {
+	position:absolute;
+	width: 50%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.25);
+	transition: background-color 0.3s;
+}
+
+.project-image {
+	width: 50%;
+	height: 25vw;
+}
+
+.projects-section__left {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.projects-section__left__bank.project-image {
+	background: url(../images/projects-bank-pixlr.jpg) -503px -25px / 129em no-repeat
+}
+
+.projects-section__left__advising.project-image {
+	background: url(../images/projects-advising-pixlr.jpg) 0px 0px / 54em no-repeat
+}
+
+.projects-section__aa {
+	position: relative;
+	width: 50%;
+	background: url(../images/projects-aa-ps.png) center center / 105em no-repeat;
+}
+
+.projects-section__aa.project-info {
+	/* Beautiful responsive vertical & horizontal text centering */
+	position: absolute;
+	width: 100%;
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+	color: white;
+	text-shadow: -1px -1px 3px #000, -1px 1px 3px #000, 1px -1px 3px #000, 1px 1px 3px #000;
+}
+
+.projects-section__aa.project-info h1 {
+	font-size: 3em;
+}
+
+.projects-section__aa.project-info h2 {
+	/* white-space: pre ensures that the multiple spaces in the h2 HTML 
+		element are preserved (here, for visual readability purposes) */
+	white-space: pre;
+	font-size: 1.5em;
+}
+
+#projects-section__left__bank:hover,#projects-section__left__advising:hover,#projects-section__aa:hover {
+	cursor: pointer;
+}
+
+/*
+	=============
+	Whitespace Tracker
+	=============
  */
 
 /** {

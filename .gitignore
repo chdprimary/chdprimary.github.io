@@ -1,0 +1,2 @@
+# ignoring a directory on windows requires a '/' to be appended to the name!
+assets/unused/

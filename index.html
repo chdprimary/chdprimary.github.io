@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Christian Dean</title>
-	<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+	<link rel="stylesheet" type="text/css" href="./assets/stylesheets/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script src="//use.typekit.net/gzg6fhe.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -31,7 +31,7 @@
 					</ul>
 				</nav>
 			</header>
-			<img class="informational-aside__personal-photo" src="./assets/images/christiandean1.png" />
+			<img class="informational-aside__personal-photo informational-aside__personal-photo__border-effects" src="./assets/images/main-profpic.png" />
 			<div class="external-link-group">
 				<a href="https://github.com/chdprimary"><i class="fa fa-github-square"></i></a>
 				<a href="https://www.linkedin.com/in/chdprimary"><i class="fa fa-linkedin-square"></i></a><!--
@@ -48,15 +48,60 @@
 		</div>
 	</section>
 	<section id="me" class="aboutme-section">
-		<aside class="aboutme-image">
-			<!-- <img src="./assets/images/christiandean2.jpg"> -->
-		</aside>
-		<div class="aboutme-text">
-			<h1>About Me</h1>
-		</div>
+		<section class="aboutme-text">
+			<div class="aboutme-text__content">
+				<h1>Tell You A Bit About Myself?</h1>
+				<br>
+				<p>Glad you asked! I'm a <a href="https://en.wikipedia.org/wiki/Front_end_development">front-end developer</a> seeking work in <a target="_blank" href="https://www.google.com/maps/place/Austin,+TX/">Austin, TX</a>. I recently graduated from <a href="https://en.wikipedia.org/wiki/Louisiana_Tech_University">Louisiana Tech University</a> with a Bachelor's in Computer Science and a minor in Math, on a full-ride scholarship and with a high GPA (3.65). </p>
+				<br>
+				<p>While I may be a recent graduate, I do have <a href="#experience">professional web development experience</a>. I'm young, eager, diligent, and will work hard for your brand. I also love doing web development. If your team is doing impactful, interesting work, and you're looking for a front-end developer, I'd love to <a href="#contact">hear from you</a>!</p>
+				<br>
+				<p>I do HTML5, CSS3, Sass, JavaScript, jQuery, and I'm learning Node, Angular, and Python. Love doing responsive, learn new things every day, fast-learner</p>
+			</div>
+		</section>
 	</section>
-	<section class="projects-section">
-		
+	<section id="projects" class="projects-section">
+		<div class="projects-section__left">
+			<div id="projects-section__left__bank" class="projects-section__left__bank project-flexrow">
+				<div class="projects-section__left__bank project-overlay"></div>
+				<div class="projects-section__left__bank project-image"></div>
+				<div class="projects-section__left__bank project-info">
+					<h2>
+						AWS | MEAN | HighCharts | Cron | Mint.com API
+					</h2>
+					<br>
+					<h1>
+						Bank Balance Tracker
+					</h1>
+					<br>
+					<i class="fa fa-long-arrow-left"></i>
+				</div>
+			</div>
+			<div id="projects-section__left__advising" class="projects-section__left__advising project-flexrow">
+				<div class="projects-section__left__advising project-info">
+					<h2>
+						CodeIgniter | Apache | PHP | Python | MySQL
+					</h2>
+					<br>
+					<h1>
+						LA Tech<br> Advising Website
+					</h1>
+					<br>
+					<i class="fa fa-long-arrow-right"></i>
+				</div>
+				<div class="projects-section__left__advising project-overlay"></div>
+				<div class="projects-section__left__advising project-image"></div>
+			</div>
+		</div>
+		<div id="projects-section__aa" class="projects-section__aa">
+			<div class="projects-section__aa project-info">
+				<h2>ASP.NET  |  jQuery  |  C#  |  SQL Server</h2>
+				<br>
+				<h1>
+					Keystroke Authentication Project<br> Internal Testing Website
+				</h1>
+			</div>
+		</div>
 	</section>
 	<section class="experience-section">
 		
@@ -71,11 +116,61 @@
 		
 	</section>
 	<script type="text/javascript">
-		var namegram = document.querySelectorAll('#namegram-header__namegram');
+		// I know I could be using jQuery, but I'm practicing my basics here. 
 
-		namegram[0].addEventListener('click', function(e) {
-			document.location = "#top";
-		})
+		(function() {
+			'use strict';
+
+			var links = document.querySelectorAll('a[href^="http"],a[href^="mailto"]');
+			var namegram = document.querySelectorAll('#namegram-header__namegram');
+			var projects = document.querySelectorAll('#projects-section__left__bank,#projects-section__left__advising,#projects-section__aa');
+			var projectOverlay;
+			var projectInfo;
+
+			// Transforming NodeList into proper array
+			links = Array.prototype.slice.call(links);
+			// Setting [target='_blank'] for each link so they open in new tabs
+			links.forEach(function(curr,idx,arr) {
+				curr.setAttribute('target', '_blank')
+			})
+
+			// Namegram at top is link to top of page
+			namegram[0].addEventListener('click', function(e) {
+				document.location = "#top";
+			})	
+
+			// Transforming 'projects' into a proper array
+			projects = Array.prototype.slice.call(projects);
+
+			projects.forEach(function(curr,idx,arr) {
+				curr.addEventListener('mouseover', function(e) {
+					projectOverlay = this.querySelector('.project-overlay');
+					projectInfo = this.querySelector('.project-info');
+
+					if (projectOverlay) {
+						projectOverlay.style['background-color'] = "rgba(0,0,0,0.35)";
+						projectOverlay.style['-webkit-filter'] = "blur(1px)";
+					}
+					
+					if (projectInfo) {
+						projectInfo.style['opacity'] = ".5"	;
+					}
+				})
+				
+				curr.addEventListener('mouseout', function(e) {
+					if (projectOverlay) {
+						projectOverlay.style['background-color'] = "rgba(0,0,0,0.25)";
+						projectOverlay.style['-webkit-filter'] = "none";
+					}
+
+					if (projectInfo) {
+						projectInfo.style['opacity'] = "1";
+					}
+				})
+			})
+
+
+		}());	
 	</script>
 </body>
 </html>
