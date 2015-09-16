@@ -136,7 +136,7 @@ p a:hover {
 
 .section-header {
 	background-color: #747A90;
-	padding: 2%;
+	padding: 3% 2% 2% 2%;
 	color: #FFF8E7;
 	text-align: center;
 	font-family: "adobe-caslon-pro", "Times New Roman", serif;
@@ -501,6 +501,7 @@ footer.accent-line {
 }
 
 .experience-section.text-section h1 {
+	font-family: "Adobe Caslon Pro", "Times New Roman", serif;
 	font-size: 2em;
 	margin-top: 1%;
 	margin-bottom: 1%;
