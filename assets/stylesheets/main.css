@@ -495,14 +495,12 @@ footer.accent-line {
 
 .experience-section.text-section {
 	padding: 2% 5% 2% 5%;
-	/*padding-left: 5%;*/
-	/*padding-right: 5%;*/
 	min-height: 25vw;
 }
 
 .experience-section.text-section h1 {
 	font-family: "Adobe Caslon Pro", "Times New Roman", serif;
-	font-size: 2em;
+	font-size: 2vw;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
@@ -519,6 +517,8 @@ footer.accent-line {
 	-ms-user-select: none;
 	user-select: none;
 	-webkit-filter: grayscale(1);
+	max-width: 100%;
+	height: auto;
 }
 
 .experience-section .project-flexrow img:hover {
