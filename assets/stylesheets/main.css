@@ -103,8 +103,8 @@ p a:hover {
 	color: #6082B6;
 }
 
-p:selection {
-	background: gray;
+::selection {
+	background: #CCC;
 }
 
 /*
@@ -124,6 +124,37 @@ p:selection {
 	-o-background-size: cover;
 	background-size: cover;
 	border-right: 1px solid #AAA;
+}
+
+.section-header {
+	background-color: #747A90;
+	padding: 2%;
+	color: #FFF8E7;
+	text-align: center;
+	font-family: "adobe-caslon-pro", "Times New Roman", serif;
+	text-transform: uppercase;
+}
+
+.section-header h1 {
+	display: inline;
+	font-size: 4em;
+}
+
+.section-header h2 {
+	display: inline;
+	margin-top: 13px;
+	font-size: 3em;
+}
+
+.section-header h3 {
+	font-size: 1em;
+	font-family: "Comic Sans MS", cursive;
+	white-space: pre;
+}
+
+footer.accent-line {
+	font-size: 1em;
+	opacity: 0.4;
 }
 
 /*
@@ -326,18 +357,23 @@ p:selection {
 	background: #FFF8E7;
 	min-height: 100%;
 	padding: 10%;
+	text-align: center;
+}
+
+.aboutme-section h3 {
+	font-size: 1em;
+	font-family: "Comic Sans MS", cursive;
+	white-space: pre;
 }
 
 .aboutme-section h1 {
 	margin: 0;
 	font-size: 4em;
-	text-align: center;
 	font-family: "adobe-caslon-pro", "Times New Roman", serif;
 }
 
 .aboutme-section p {
 	font-size: 1.5em;
-	text-align: center;
 }
 
 /*
