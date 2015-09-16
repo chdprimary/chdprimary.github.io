@@ -113,19 +113,6 @@ p a:hover {
 	============
  */
 
-.main-section {
-	/* Sets main background image */
-	width: 80%;
-	height: 100%;
-	/* Image taken from Unsplash under Creative Commons Zero license -- https://unsplash.com/license */
-	background: url(../images/main-background.jpg) center center no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	border-right: 1px solid #AAA;
-}
-
 .text-section {
 	display: flex;
 	flex-direction: column;
@@ -192,7 +179,7 @@ footer.accent-line {
 	max-height: 150px;
 	
 	cursor: pointer;
-}
+}	
 
 /*
 	============
@@ -200,48 +187,14 @@ footer.accent-line {
 	============
  */
 
-.informational-aside {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	position: absolute;
-	top:0;
-	right:0;
-	width: 24em;
-	height: 100%;
-	/* Cosmic Latte! */
-	background: #FFF8E7;
-	padding: 54px;
-	overflow: hidden;
-}
-
-
-.informational-aside__info {
-	text-align: center;
-}
-
 .informational-aside__info * {
 	margin: 0;
 	border: 0;
 	padding: 0;
 }
 
-.header-text {
-	/* These margins make Caslon Pro look better. */
-	margin-left: 5px;
-	margin-bottom: 10px;
-	text-align: justify;
-	font-size: 60px;
-	font-family: "adobe-caslon-pro", "Times New Roman", serif;
-}
-
 .header-text .subtext {
 	color: gray;
-}
-
-.subheader-text {
-	font-size: 34px;
-	font-family: "Adobe Caslon Pro", "Times New Roman", serif;
 }
 
 .main-nav {
@@ -271,14 +224,6 @@ footer.accent-line {
 	color: black;
 }
 
-.informational-aside__personal-photo {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 40px;
-	max-height: 200px;
-}
-
 .informational-aside__personal-photo__border-effects {
 	border-radius: 50%;
 	border: 2px solid white;
@@ -304,22 +249,271 @@ footer.accent-line {
 	opacity: 0.7;
 }
 
+@font-face{ 
+	font-family: 'Intro Rust';
+	src: url('../fonts/introrust/introrustg-base2line-webfont.eot');
+	src: url('../fonts/introrust/introrustg-base2line-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/introrust/introrustg-base2line-webfont.woff') format('woff'),
+	     url('../fonts/introrust/introrustg-base2line-webfont.ttf') format('truetype'),
+	     url('../fonts/introrust/introrustg-base2line-webfont.svg#webfont') format('svg');
+}
+
+@media screen and (min-height: 900px) and (min-width: 1028px) {
+	.main-section {
+		/* Sets main background image */
+		width: 80%;
+		height: 100%;
+		/* Image taken from Unsplash under Creative Commons Zero license -- https://unsplash.com/license */
+		background: url(../images/main-background.jpg) center center no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		border-right: 1px solid #AAA;
+	}
+
+	.informational-aside {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: absolute;
+		top:0;
+		right:0;
+		width: 24em;
+		height: 100%;
+		/* Cosmic Latte! */
+		background: #FFF8E7;
+		padding: 3.375em;
+		overflow: hidden;
+	}
+
+	.informational-aside__info {
+		text-align: center;
+	}
+
+	.header-text {
+		/* These margins make Caslon Pro look better. */
+		margin-left: 5px;
+		margin-bottom: 10px;
+		text-align: justify;
+		font-size: 3.75em;
+		font-family: "adobe-caslon-pro", "Times New Roman", serif;
+	}
+
+	.subheader-text {
+		font-size: 34px;
+		font-family: "Adobe Caslon Pro", "Times New Roman", serif;
+	}
+
+	.informational-aside__personal-photo {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 40px;
+		max-height: 200px;
+	}	
+
+	.fold-indicator-container {
+		position: absolute;
+		top:80%;
+		right:19%;
+		bottom:0;
+		left:0;
+		margin: auto;
+		width: 42px;
+		height: 135px;
+	}	
+
+	.name-column {
+		display: none;
+	}	
+}
+
+@media screen and (max-height: 899px) and (min-height: 800px) and (min-width: 1028px) {
+	.main-section {
+		/* Sets main background image */
+		width: 80%;
+		height: 100%;
+		/* Image taken from Unsplash under Creative Commons Zero license -- https://unsplash.com/license */
+		background: url(../images/main-background.jpg) center center no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		border-right: 1px solid #AAA;
+	}
+
+	.informational-aside {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: absolute;
+		top:0;
+		right:0;
+		width: 24em;
+		height: 100%;
+		/* Cosmic Latte! */
+		background: #FFF8E7;
+		padding: 3.375em;
+		overflow: hidden;
+	}
+
+	.informational-aside__info {
+		text-align: center;
+	}
+	
+	.header-text {
+		/* These margins make Caslon Pro look better. */
+		margin-left: 5px;
+		margin-bottom: 10px;
+		text-align: center;
+		font-size: 2.75em;
+		font-family: "adobe-caslon-pro", "Times New Roman", serif;
+	}
+
+	.subheader-text {
+		display: none;
+	}
+
+	.informational-aside__personal-photo {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 40px;
+		max-height: 200px;
+	}
+
+	.fold-indicator-container {
+		position: absolute;
+		top:80%;
+		right:19%;
+		bottom:0;
+		left:0;
+		margin: auto;
+		width: 42px;
+		height: 135px;
+	}	
+
+	.name-column {
+		display: none;
+	}
+}
+
+@media screen and (max-height: 799px), screen and (max-width: 1028px) {
+	.main-section {
+		/* Sets main background image */
+		width: 90%;
+		height: 100%;
+		/* Image taken from Unsplash under Creative Commons Zero license -- https://unsplash.com/license */
+		background: url(../images/main-background.jpg) center center no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		border-right: 1px solid #AAA;
+	}	
+
+	.informational-aside {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		top:0;
+		right:0;
+		width: 10%;
+		height: 100%;
+		/* Cosmic Latte! */
+		background: #FFF8E7;
+		padding: 1em;
+		overflow: hidden;
+	}
+
+	.informational-aside__info {
+		display: none;
+	}
+
+	.informational-aside__personal-photo {
+		display: none;
+	}	
+
+	.fold-indicator-container {
+		position: absolute;
+		top:80%;
+		right:8%;
+		bottom:0;
+		left:0;
+		margin: auto;
+		width: 42px;
+		height: 135px;
+	}
+
+	.name-column {
+		font-family: "Intro Rust";
+		font-size: 3em;
+		text-align: center;
+	}
+}
+
+@media screen and (max-height: 870px) and (max-width: 1028px) {
+	.main-section {
+		/* Sets main background image */
+		width: 90%;
+		height: 100%;
+		/* Image taken from Unsplash under Creative Commons Zero license -- https://unsplash.com/license */
+		background: url(../images/main-background.jpg) center center no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		border-right: 1px solid #AAA;
+	}	
+
+	.informational-aside {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		top:0;
+		right:0;
+		width: 10%;
+		height: 100%;
+		/* Cosmic Latte! */
+		background: #FFF8E7;
+		padding: 1em;
+		overflow: hidden;
+	}
+
+	.informational-aside__info {
+		display: none;
+	}
+
+	.informational-aside__personal-photo {
+		display: none;
+	}	
+
+	.fold-indicator-container {
+		position: absolute;
+		top:80%;
+		right:8%;
+		bottom:0;
+		left:0;
+		margin: auto;
+		width: 42px;
+		height: 135px;
+	}
+
+	.name-column {
+		font-family: "Intro Rust";
+		font-size: 2em;
+		text-align: center;
+	}
+}
+
 /*
 	============
 	Fold Indicator
 	============
  */
-
-.fold-indicator-container {
-	position: absolute;
-	top:80%;
-	right:19%;
-	bottom:0;
-	left:0;
-	margin: auto;
-	width: 42px;
-	height: 135px;
-}
 
 .fold-indicator-container * {
 	color: #F9F4DA;
