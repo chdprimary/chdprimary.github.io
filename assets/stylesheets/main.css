@@ -126,6 +126,14 @@ p a:hover {
 	border-right: 1px solid #AAA;
 }
 
+.text-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: #FFF8E7;
+	text-align: center;
+}
+
 .section-header {
 	background-color: #747A90;
 	padding: 2%;
@@ -146,7 +154,7 @@ p a:hover {
 	font-size: 3em;
 }
 
-.section-header h3 {
+.progress-indicator {
 	font-size: 1em;
 	font-family: "Comic Sans MS", cursive;
 	white-space: pre;
@@ -350,20 +358,9 @@ footer.accent-line {
 	============
  */
 
-.aboutme-section {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background: #FFF8E7;
+.aboutme-section.text-section {
 	min-height: 100%;
 	padding: 10%;
-	text-align: center;
-}
-
-.aboutme-section h3 {
-	font-size: 1em;
-	font-family: "Comic Sans MS", cursive;
-	white-space: pre;
 }
 
 .aboutme-section h1 {
@@ -488,6 +485,44 @@ footer.accent-line {
 .projects-section__aa.project-info:hover {
 	-webkit-filter: brightness(0.8);
 	background-size: 110em;
+}
+
+/*
+	============
+	Experience Section
+	============
+ */
+
+.experience-section.text-section {
+	padding: 2% 5% 2% 5%;
+	/*padding-left: 5%;*/
+	/*padding-right: 5%;*/
+	min-height: 25vw;
+}
+
+.experience-section.text-section h1 {
+	font-size: 2em;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.experience-section .project-flexrow {
+	margin: 1% 17% 1% 14.5%;
+	justify-content: space-between;
+}
+
+.experience-section .project-flexrow img {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-filter: grayscale(1);
+}
+
+.experience-section .project-flexrow img:hover {
+	cursor: pointer;
+	-webkit-filter: none
 }
 
 /*
