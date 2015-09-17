@@ -32,7 +32,7 @@
 						<li><a href="#experience">Experience</a></li>
 						<li><a href="#education">Education</a></li>
 						<li><a href="#skills">Skills</a></li>
-						<li><a href="#resume">Resume</a></li>
+						<li><a href="./assets/files/ChristianDean_Resume.pdf">Resume</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -162,7 +162,6 @@
 			'use strict';
 
 			var links = document.querySelectorAll('a[href^="http"],a[href^="mailto"]');
-			var namegram = document.querySelectorAll('#namegram-header__namegram');
 			var leftProjects = document.querySelectorAll('#projects-section__left__bank,#projects-section__left__advising');
 			var aaProject = document.getElementById('projects-section__aa');
 
@@ -176,11 +175,6 @@
 			links.forEach(function(curr,idx,arr) {
 				curr.setAttribute('target', '_blank')
 			})
-
-			// Namegram at top is link to top of page
-			namegram[0].addEventListener('click', function(e) {
-				document.location = "#top";
-			})	
 
 			// Transforming 'projects' into a proper array
 			leftProjects = Array.prototype.slice.call(leftProjects);
