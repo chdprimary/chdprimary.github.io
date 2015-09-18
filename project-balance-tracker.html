@@ -7,45 +7,55 @@
 	<link rel="stylesheet" type="text/css" href="./assets/stylesheets/project-balance-tracker.css">
 </head>
 <body>
-	<div class="project-page__container">
-		<section class="project-page__video">
-			<!-- <video height="500" width="1400" controls>
-				<source src="./assets/videos/projects-bank.mp4" type="video/mp4">
-			</video> -->
-			<video height="300" width="400" controls>
-				<source src="./assets/videos/projects-bank.mp4" type="video/mp4">
-			</video>
-		</section>
-		<section class="project-page__video-description">
-			<div class="project-page__video-description__header section-header">
-				<h1>Balance Tracker Project</h1>
-			</div>	
-			<div class="project-page__video-description__text">
-				<h2>The Setup</h2>
-				<p>
-					<b>In June 2015 I decided</b> that I'd like to experiment a bit with AWS. I decided to create a page featuring an automatically-updating chart of my personal checking account balance. 
-				</p>
-				<h2>The Plan</h2>
-				<p>
-					Since my bank information is hosted on mint.com, I did some digging and found an open-source mint.com API called pepper-mint (https://github.com/dhleong/pepper-mint) which I could use 
-					to scrape my bank balance. I first scanned through the API to ensure there was no way it could phone home with my mint.com password hard-coded in. Although there was some documentation 
-					provided for this API, information on how to access an account's balance was missing. It took a small amount of reverse-engineering, but I managed to figure out the proper terminology for 
-					returning my account balance anyway. I ran pepper-mint, and it successfully returned my balance.
-				</p>
-				<p>
-					I then read a bit about AWS and surmised I'd need to create an EC2 instance. I did so, using a Bitnami MEAN image to accomplish a fast stand-up. I scp'd pepper-mint to the EC2 instance,
-					and built my own JS script on top of it which would format &amp; append the current date and current bank balance to a persistent CSV file. This script was made to run every 3 days using
-					the open-source node-schedule (https://github.com/tejasmanohar/node-schedule), which is basically the traditional cron functionality wrapped up in a JavaScript library. 
-				</p>
-				<p>
-					The last step was short &ndash; I just created a simple page, which used jQuery and HighCharts to create an animated line graph of the data stored in the CSV file. 
-				</p>
+	<video class="project-page__video" height="500" width="100%" controls>
+		<source src="./assets/videos/projects-bank.mp4" type="video/mp4">
+	</video>
+	<section class="project-page__video-description">
+		<div class="project-page__video-description__header section-header">
+			<h1>Balance Tracker Project</h1>
+		</div>	
+		<div class="project-page__video-description__text">
+			<h2>The Setup</h2>
+			<p>
+				In June 2015 I decided that I'd like to experiment a bit with AWS. I decided to create a page featuring an automatically-updating chart of my personal checking account balance. 
+			</p>
+			<h2>The Plan</h2>
+			<p>
+				Since my bank information is hosted on <a href="https://www.mint.com">mint.com</a>, I did some digging and found an open-source mint.com API called <a href="https://github.com/dhleong/pepper-mint">pepper-mint</a> which I could use 
+				to scrape my bank balance. I first scanned through the API to ensure there was no way it could phone home with my mint.com password hard-coded in. Although there was some documentation 
+				provided for this API, information on how to access an account's balance was missing. It took a small amount of reverse-engineering, but I managed to figure out the proper terminology for 
+				returning my account balance anyway. I ran pepper-mint, and it successfully returned my balance.
+			</p>
+			<p>
+				I then read a bit about AWS and surmised I'd need to create an <em>EC2</em> instance. I did so, using a Bitnami MEAN image to accomplish a fast stand-up. I scp'd pepper-mint to the EC2 instance,
+				and built my own JS script on top of it which would format &amp; append the current date and current bank balance to a persistent CSV file. This script was made to run every 3 days using
+				the open-source <a href="https://github.com/tejasmanohar/node-schedule">node-schedule</a>, which is basically the traditional cron functionality wrapped up in a JavaScript library. 
+			</p>
+			<p>
+				The last step was short &ndash; I just created a simple page, which used jQuery and HighCharts to create an animated line graph of the data stored in the CSV file. 
+			</p>
+			<div class="project-page__video-description__text__tools">
 				<h2>The Tools</h2>
-				<p>AWS EC2 &#8226; MEAN &#8226; Highcharts &#8226; Cron (node-schedule) &#8226; Mint.com API (pepper-mint) &#8226; Linux commands (ssh, scp, nano)</p>
+				<p>
+					AWS EC2 &#8226; MEAN &#8226; Highcharts &#8226; Cron (node-schedule) &#8226; Mint.com API (pepper-mint) &#8226; Linux commands (ssh, scp, nano)
+				</p>
 			</div>
-		</section>
-	</div>
-	
+		</div>
+	</section>
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+
+			var links = document.querySelectorAll('a[href^="http"],a[href^="mailto"]');
+
+			// Transforming NodeList into proper array
+			links = Array.prototype.slice.call(links);
+			// Setting [target='_blank'] for each link so they open in new tabs
+			links.forEach(function(curr, idx, arr) {
+				curr.setAttribute('target', '_blank');
+			});
+		}())
+	</script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -55,6 +65,5 @@
 		ga('create', 'UA-67738750-1', 'auto');
 		ga('send', 'pageview');
 	</script>
-
 </body>
 </html>

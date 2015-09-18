@@ -54,10 +54,99 @@ table {
 	==============
  */
 
-.project-page__container {
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Times New Roman", serif;
+	margin: 0;
+	background: #F8F7F5;
+}
+
+p {
+	line-height: 1.3;
+}
+
+p a {
+	text-decoration: none;
+	color: #747A90;
+	font-weight: bold;
+	-webkit-transition: color 0.2s;
+	-moz-transition: color 0.2s;
+	-o-transition: color 0.2s;
+	-ms-transition: color 0.2s;
+	transition: color 0.2s;	
+}
+
+p a:hover {
+	color: #6082B6;
+}
+
+::selection {
+	background: #CCC;
+}
+
+/*
+	==============
+	Project Page
+	==============
+ */
+
+.project-page__video {
+	margin-top: 3%;
+	margin-bottom: 3%;
+	padding: 1%;
+	background-color: white;
+}
+
+.project-page__video-description {
 	width: 60em;
 	height: 100%;
-	margin-left: 25%;
-	margin-right: 25%;
-	background: red;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.project-page__video-description__header {
+	border-top: 5px solid #616B93;
+	border-right: 5px solid #616B93;
+	border-left: 5px solid #616B93;
+	padding: 2%;
+	color: #FFF8E7;
+	background-color: #747A90;
+	font-family: "Adobe Caslon Pro", "Arial";
+	font-size: 2em;
+	font-weight: bold;
+	letter-spacing: 0.25em;
+	text-align: center;
+	font-variant: small-caps;
+}
+
+.project-page__video-description__text {
+	border-right: 5px solid #FCECC8;
+	border-left: 5px solid #FCECC8;
+	padding: 2%;
+	background-color: #FFF8E7;
+}
+
+.project-page__video-description__text h2 {
+	text-align: center;
+	letter-spacing: 0.1em;
+	font-size: 1.25em;
+}
+
+.project-page__video-description__text p {
+	text-align: justify;
+	margin: 1em;
+}
+
+.project-page__video-description__text__tools>h2, .project-page__video-description__text__tools>p {
+	text-align: center;
+	opacity: 0.4;
 }
