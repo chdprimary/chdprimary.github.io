@@ -114,10 +114,8 @@ p a:hover {
 }
 
 .project-page__video-description__header {
-	border-top: 5px solid #616B93;
-	border-right: 5px solid #616B93;
-	border-left: 5px solid #616B93;
-	padding: 2%;
+	border-top: 2px solid #596490;
+	border-right: 5px solid #596490;
 	color: #FFF8E7;
 	background-color: #747A90;
 	font-family: "Adobe Caslon Pro", "Arial";
@@ -128,9 +126,13 @@ p a:hover {
 	font-variant: small-caps;
 }
 
+.project-page__video-description__header h1 {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
 .project-page__video-description__text {
 	border-right: 5px solid #FCECC8;
-	border-left: 5px solid #FCECC8;
 	padding: 2%;
 	background-color: #FFF8E7;
 }
@@ -149,4 +151,12 @@ p a:hover {
 .project-page__video-description__text__tools>h2, .project-page__video-description__text__tools>p {
 	text-align: center;
 	opacity: 0.4;
+}
+
+.material-design-corner {
+	float: right;
+	width: 0; 
+	height: 0; 
+	border-bottom: 45px solid transparent; 
+	border-right:30px solid #6D738F; 
 }

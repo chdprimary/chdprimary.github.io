@@ -12,20 +12,37 @@
 	</video>
 	<section class="project-page__video-description">
 		<div class="project-page__video-description__header section-header">
+			<div class="material-design-corner"></div>
 			<h1>Testing Interface Website Project</h1>
 		</div>	
 		<div class="project-page__video-description__text">
-			<h2>The What and The Why</h2>
+			<h2>The What</h2>
 			<p>
-				While I was a student worker on a 'keyboard authentication' project between Louisiana Tech University and DARPA, my main task was to design, build, and maintain a testing interface for
-				the project. As the system's code base was being built and academic papers were being written, regression tests on the system were being run almost constantly. My site allowed a user
+				While I was a student worker on a 'keyboard authentication' project between Louisiana Tech University and DARPA, my main task was to design, build, and maintain a testing interface web 
+				application for the project. I had no experience in web development, ASP.NET, C#, jQuery, or AJAX, but I learned everything from scratch quickly as I developed the site.
+			<p>
+			<h2>The Why</h2>
+			<p>
+				As the system's code base was being built and academic papers were being written, regression and performance analysis tests were being run almost constantly. My site allowed a user
 				to enqueue these tests (by configuring various parameters), check their status, view their conclusive data upon finishing or failing, and export this data to CSV. This site provided 
 				a public interface to non-technical decision-makers who otherwise would have no way to interact with the system. This site, at it's highest capacity, gave access to the data of several
 				hundred system tests.
 			</p>
 			<h2>The How</h2>
 			<p>
-				
+				I started with the 'Create Test' functionality. I created a sectioned HTML form where each section of fields was disabled until the preceding section's fields had been filled. 
+				When this form was finally submitted with all test parameters and metadata, the data was serialized and jQuery AJAX'd to a WebMethod on the backend, which gathered the data into a
+				DataTable. This DataTable was then passed as a set of parameters a TSQL stored procedure, which transferred the data to our SQL Server database. Upon completion, the user was
+				notified of the success via an on-page modal.
+			</p>
+			<p>
+				I was given new features to implement as time passed, such as the ability to monitor a test's status, view a test's results, and perform analysis tests by choosing particular
+				combinations of typing features to feed to the system. For the Test Status and Test Results pages I had to figure out how to programmatically create HTML tables as data was returned
+				from stored procedures. For the Analysis page I wrote code to populate a 'checkbox matrix' of features from test data contained in our database. 
+			</p>
+			<p>
+				I refactored my jQuery code a couple times as I gained knowledge and experience with the library, and saw significant performance and readability increases. I styled the entire app 
+				by building custom CSS here and there on top of the '<a href="https://bootswatch.com/flatly/">Flatly</a>' Bootstrap theme.
 			</p>
 			<div class="project-page__video-description__text__tools">
 				<h2>The Tools</h2>
@@ -35,6 +52,7 @@
 			</div>
 		</div>		
 	</section>
+	
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,5 +62,6 @@
 		ga('create', 'UA-67738750-1', 'auto');
 		ga('send', 'pageview');
 	</script>
+
 </body>
 </html>
