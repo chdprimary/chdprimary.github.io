@@ -200,15 +200,30 @@ footer.accent-line {
 }
 
 .informational-aside ul {
-	padding: 0;
+	padding: 1%;
 	text-transform: uppercase;
 }
 
-.main-nav__list {
-	line-height: 18px;
+.main-nav__text {
+	display: inline-block;
+	border-right: 1px solid gray;
+	margin-left: -35px;
+	text-align: right;
+	line-height: 22px;
 }
 
-.main-nav__list a {
+.main-nav__icons {
+	display: inline-block;	
+	text-align: center;
+	line-height: 22px;
+}
+
+.main-nav__icons .cv-icon {
+	height: 22px;
+	padding-top: 3px;
+}
+
+.main-nav__text a {
 	text-decoration: none;
 	color: gray;
 	-webkit-transition: color 0.2s;
@@ -218,7 +233,7 @@ footer.accent-line {
 	transition: color 0.2s;
 }
 
-.main-nav__list a:hover {
+.main-nav__text a:hover {
 	color: black;
 }
 
@@ -634,6 +649,18 @@ footer.accent-line {
 	width: 50%;
 }
 
+.fa.fa-long-arrow-left, .fa.fa-long-arrow-right {
+	transition: transform 0.2s ease;
+}
+
+#projects-section__left__bank:hover .fa.fa-long-arrow-left {
+	transform: translateX(-10px);
+}
+
+#projects-section__left__advising:hover .fa.fa-long-arrow-right {
+	transform: translateX(10px);
+}
+
 .projects-section__left__bank.project-image {
 	background: url(../images/projects-bank-pixlr.jpg) -503px -25px / 129em no-repeat
 }
@@ -749,6 +776,47 @@ footer.accent-line {
 .experience-section .project-flexrow img:hover {
 	cursor: pointer;
 	-webkit-filter: none
+}
+
+
+
+/*
+	===============
+	Work In Progress
+	===============
+ */
+
+.work-in-progress-indicator.fa.fa-spinner {
+	-webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-moz-keyframes spin {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);		
+		transform: rotate(360deg);
+	}
+}
+
+.rest-of-page-indicator.fa.fa-angle-double-down {
+	font-size: 1.5em;
+}
+
+.section-header#bottom {
+	height: 75%;
 }
 
 /*

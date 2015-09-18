@@ -106,14 +106,25 @@ p a:hover {
 	background-color: white;
 }
 
-.project-page__video-description {
+.project-page__image {
+	position: relative; 
+	width: 1000px; 
+	left: 50%; 
+	border: 1px solid black;
+	margin-left: -500px; 
+	/*margin-right: auto;*/
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.project-page__description {
 	width: 60em;
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.project-page__video-description__header {
+.project-page__description__header {
 	border-top: 2px solid #596490;
 	border-right: 5px solid #596490;
 	color: #FFF8E7;
@@ -126,29 +137,29 @@ p a:hover {
 	font-variant: small-caps;
 }
 
-.project-page__video-description__header h1 {
+.project-page__description__header h1 {
 	padding-top: 2%;
 	padding-bottom: 2%;
 }
 
-.project-page__video-description__text {
+.project-page__description__text {
 	border-right: 5px solid #FCECC8;
 	padding: 2%;
 	background-color: #FFF8E7;
 }
 
-.project-page__video-description__text h2 {
+.project-page__description__text h2 {
 	text-align: center;
 	letter-spacing: 0.1em;
 	font-size: 1.25em;
 }
 
-.project-page__video-description__text p {
+.project-page__description__text p {
 	text-align: justify;
 	margin: 1em;
 }
 
-.project-page__video-description__text__tools>h2, .project-page__video-description__text__tools>p {
+.project-page__description__text__tools>h2, .project-page__description__text__tools>p {
 	text-align: center;
 	opacity: 0.4;
 }

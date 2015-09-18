@@ -28,14 +28,23 @@
 				<p class="subheader-text">Nice to meetcha.</p>
 				<nav class="main-nav">
 					<!-- Don't wanna use numbers, figure another way to indicate position / progress -->
-					<ul class="main-nav__list">
+					<ul class="main-nav__text">
 						<li><a href="#me">Me</a></li>
 						<li><a href="#projects">Projects</a></li>
 						<li><a href="#experience">Experience</a></li>
-						<li><a href="#education">Education</a></li>
-						<li><a href="#skills">Skills</a></li>
+						<li><a href="#bottom">Education</a></li>
+						<li><a href="#bottom">Skills</a></li>
 						<li><a href="./assets/files/ChristianDean_Resume.pdf">Resume</a></li>
 						<li><a href="mailto:chdprimary@gmail.com">Contact</a></li>
+					</ul>
+					<ul class="main-nav__icons">
+						<li><i class="fa fa-smile-o"></i></li>
+						<li><i class="fa fa-line-chart"></i></li>
+						<li><i class="fa fa-briefcase"></i></li>
+						<li><i class="fa fa-graduation-cap"></i></li>
+						<li><i class="fa fa-terminal"></i></li>
+						<li class="cv-icon"><img src="./assets/images/icon_cv.png"></img></li>
+						<li><i class="fa fa-bullhorn"></i></li>
 					</ul>
 				</nav>
 			</header>
@@ -69,7 +78,7 @@
 				<br>
 				<p>While I may be a recent graduate, I do have <a href="#projects">professional web development experience</a>. I'm a fast learner, diligent, eager to prove myself, and will work hard for your company. I <em>love</em> both the design and technical aspects of my job, and greatly enjoy producing superior-quality work. </p>
 				<br>
-				<p>If your team is doing something impactful &amp; interesting, and you're looking for a front-end developer, I'd love to <a href="#contact">hear from you</a>!</p>
+				<p>If your team is doing something impactful &amp; interesting, and you're looking for a front-end developer, I'd love to <a href="mailto:chdprimary@gmail.com">hear from you</a>!</p>
 				<br>
 				<br>
 				<footer class="accent-line">JavaScript &#8226; jQuery &#8226; HTML5 &#8226; Responsive CSS3 &#8226; Sass &#8226; Angular &#8226; Node &#8226; Python &#8226; SQL &#8226; MongoDB &#8226; Photoshop &#8226; Illustrator</footer>
@@ -159,8 +168,11 @@
 		
 	</section>
 	<div id="bottom" class="section-header">
-		<i class="progress-indicator fa fa-spinner" style="display: block;"></i>
+		<i class="work-in-progress-indicator fa fa-spinner"></i>
+		<br>
 		<h2>&mdash; </h2><h1>U</h1><h2>nder  <h1>C</h1><h2>onstruction &mdash;</h2>
+		<br>
+		<i class="rest-of-page-indicator fa fa-angle-double-down"></i>
 	</div>	
 	<script type="text/javascript">
 		// I know I could be using jQuery, but I'm practicing my basics here. 
@@ -197,7 +209,7 @@
 					}
 					
 					if (projectInfo) {
-						projectInfo.style['opacity'] = ".5"	;
+						projectInfo.style['opacity'] = ".65"	;
 					}
 
 					if (projectImage) {

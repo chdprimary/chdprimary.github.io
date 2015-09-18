@@ -4,10 +4,69 @@
 	<meta charset="UTF-8">
 	<title>Christian Dean &mdash; Advising Website Project</title>
 	<link rel="icon" type="image/x-icon" href="./favicon.ico">
-	<link rel="stylesheet" type="text/css" href="./assets/stylesheets/project-advising-website.css">	
+	<link rel="stylesheet" type="text/css" href="./assets/stylesheets/project.css">	
 </head>
 <body>
-	<img src="./assets/images/projects-advising.jpg">
+	<section class="project-page__description">
+		<img class="project-page__image" src="./assets/images/projects-advising.png">
+		<div class="project-page__description__header section-header">
+			<div class="material-design-corner"></div>
+			<h1>Advising Webapp Project</h1>
+		</div>	
+		<div class="project-page__description__text">
+			<h2>The Setup</h2>
+			<p>
+				My senior capstone class was tasked with developing, as a team, a 'student advisement' web app to replace the university's traditional pen-and-paper advisement process. 
+			</p>
+			<h2>The Plan</h2>
+			<p>
+				During the design and requirements gathering phase of the project, I was selected as a team leader. Our team scheduled interviews with advisors to discover what features they'd like
+				to see most. This information ultimately was expanded into a <a href="./assets/files/RequirementSheetsCS403.pdf">design document</a> full of UI designs and use case descriptions. When
+				the class began to move into the app's active development phase, a friend and I were tasked as database administrators. We rapidly prototyped the database using a SQL Diagram tool called
+				<a href="https://diagrams.seaquail.net">Sea Quail</a>, which allows a user to export a diagram as a CREATE/INSERT script (which would eventually end up over 3000+ lines long). This
+				method was arguably much more time-effective than hand-coding the script. 
+			</p>
+			<p>
+				As the project continued, we continued to maintain the database and expand it according to the needs of other teams. We also developed several of the PHP user models for CodeIgniter's 
+				framework. In the final phase of the project, we performed integration testing of the other team's features as everything was consolidated, ensuring a working final product. I also helped
+				translate a peer's Python script into PHP. When the final class presentation was given to the <a href="https://en.wikipedia.org/wiki/Computer_Sciences_Corporation">CSC</a>, I described 
+				the database's development process and table relationships. My slides can be downloaded <a href="./assets/files/Dean_404_Presentation.pptx">here</a>.
+			</p>
+			<p>
+				Check out the images below for the final database diagram, UI designs (by me), and the final use case diagram.
+			</p>
+			<div class="project-page__description__text__tools">
+				<h2>The Tools</h2>
+				<p>
+					CodeIgniter &#8226; MVC &#8226; Apache &#8226; PHP &#8226; Python &#8226; MySQL &#8226; Trello &#8226; PHPMyAdmin &#8226; Teamwork!
+				</p>
+			</div>
+		</div>
+	</section>
+	<img class="project-page__image" src="./assets/images/projects-advising-db-diagram.png"><br>
+	<img class="project-page__image" src="./assets/images/projects-advising-1.jpg"><br>
+	<img class="project-page__image" src="./assets/images/projects-advising-2.jpg"><br>
+	<img class="project-page__image" src="./assets/images/projects-advising-3.jpg"><br>
+	<img class="project-page__image" src="./assets/images/projects-advising-4.jpg"><br>
+	<img class="project-page__image" src="./assets/images/projects-advising-5.jpg"><br>
+	<img class="project-page__image" src="./assets/images/projects-advising-6.jpg"><br>
+	<img class="project-page__image" src="./assets/images/projects-advising-usecase.png"><br>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+
+			var links = document.querySelectorAll('a[href^="http"],a[href^="mailto"]');
+
+			// Transforming NodeList into proper array
+			links = Array.prototype.slice.call(links);
+			// Setting [target='_blank'] for each link so they open in new tabs
+			links.forEach(function(curr, idx, arr) {
+				curr.setAttribute('target', '_blank');
+			});
+		}())
+	</script>	
+
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,5 +76,6 @@
 		ga('create', 'UA-67738750-1', 'auto');
 		ga('send', 'pageview');
 	</script>
+
 </body>
 </html>
