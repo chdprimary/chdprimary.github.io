@@ -734,7 +734,7 @@ footer.accent-line {
 		margin-bottom: 1%;
 	}
 }
-@media screen and (min-width: 1130px) and (max-width: 1719px) {
+@media screen and (min-width: 1150px) and (max-width: 1719px) {
 	.experience-section.text-section h1 {
 		font-family: "Adobe Caslon Pro", "Times New Roman", serif;
 		font-size: 1.5em;
@@ -743,22 +743,61 @@ footer.accent-line {
 	}
 }
 
-@media screen and (min-width: 770px) and (max-width: 1129px) {
+@media screen and (min-width: 770px) and (max-width: 1149px) {
 	.experience-section.text-section h1 {
 		font-family: "Adobe Caslon Pro", "Times New Roman", serif;
 		font-size: 1em;
 		margin-top: 1%;
 		margin-bottom: 1%;
 	}
+
+	/* Hack to change text content, since vw doesn't work on android and font size doesn't reduce properly on mobile */
+	.past-employers-header span, .future-employers-header span {
+		display: none;
+	}
+
+	.past-employers-header:after {
+		font-size: 1.5em;
+		content: "People I've worked with - thanks guys!";
+	}
+
+	.future-employers-header:after {
+		font-size: 1.5em;
+		content: "People I'd like to work with - call me!";
+	}
+
+	.hover-prompt {
+		display: none;
+	}
 }
 
-@media handheld, screen and (max-width: 769px) {
+/* Ideal site layout breaks down below 740px wide */
+@media screen and (max-width: 769px) {
 	.experience-section.text-section h1 {
 		font-family: "Adobe Caslon Pro", "Times New Roman", serif;
 		font-size: 0.75em;
 		margin-top: 1%;
 		margin-bottom: 1%;
 	}
+
+	/* Hack to change text content, since vw doesn't work on android and font size doesn't reduce properly on mobile */
+	.past-employers-header span, .future-employers-header span {
+		display: none;
+	}
+
+	.past-employers-header:after {
+		font-size: 1.5em;
+		content: "People I've worked with - thanks guys!";
+	}
+
+	.future-employers-header:after {
+		font-size: 1.5em;
+		content: "People I'd like to work with - call me!";
+	}	
+
+	.hover-prompt {
+		display: none;
+	}	
 }
 
 .experience-section .project-flexrow {
