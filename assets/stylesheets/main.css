@@ -284,7 +284,8 @@ footer.accent-line {
 	.main-section {
 		/* Sets main background image */
 		width: 80%;
-		height: 100%;
+		/* Was height: 100%, but on mobile that caused a jump in image size when URL bar is hidden from scrolling */
+		height: 100vh;
 		/* Image taken from Unsplash under Creative Commons Zero license -- https://unsplash.com/license */
 		background: url(../images/main-background.jpg) center center no-repeat;
 		-webkit-background-size: cover;
@@ -356,7 +357,8 @@ footer.accent-line {
 	.main-section {
 		/* Sets main background image */
 		width: 80%;
-		height: 100%;
+		/* Was height: 100%, but on mobile that caused a jump in image size when URL bar is hidden from scrolling */
+		height: 100vh;
 		/* Image taken from Unsplash under Creative Commons Zero license -- https://unsplash.com/license */
 		background: url(../images/main-background.jpg) center center no-repeat;
 		-webkit-background-size: cover;
@@ -427,7 +429,8 @@ footer.accent-line {
 	.main-section {
 		/* Sets main background image */
 		width: 90%;
-		height: 100%;
+		/* Was height: 100%, but on mobile that caused a jump in image size when URL bar is hidden from scrolling */
+		height: 100vh;
 		/* Image taken from Unsplash under Creative Commons Zero license -- https://unsplash.com/license */
 		background: url(../images/main-background.jpg) center center no-repeat;
 		-webkit-background-size: cover;

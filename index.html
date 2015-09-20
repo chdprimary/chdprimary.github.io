@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scaleable=no, width=device-width" />
 	<title>Christian Dean &mdash; Home</title>
 	<link rel="icon" type="image/x-icon" href="./favicon.ico">
 	<link rel="stylesheet" type="text/css" href="./assets/stylesheets/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	
 	<script src="//use.typekit.net/gzg6fhe.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -286,6 +288,22 @@
 				document.location = "project-aa-interface.html";
 			})
 		}());	
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('a[href^="#"]').on('click',function (e) {
+			    e.preventDefault();
+
+			    var target = this.hash;
+			    var $target = $(target);
+
+			    $('html, body').stop().animate({
+			        'scrollTop': $target.offset().top
+			    }, 900, 'swing', function () {
+			        window.location.hash = target;
+			    });
+			});
+		});
 	</script>
 	
 	<script>
