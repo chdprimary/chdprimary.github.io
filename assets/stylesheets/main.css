@@ -334,6 +334,7 @@ footer.accent-line {
 		margin-right: auto;
 		margin-top: 40px;
 		max-height: 200px;
+		max-width: 13em;
 	}	
 
 	.fold-indicator-container {
