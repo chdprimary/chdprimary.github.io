@@ -762,7 +762,7 @@ footer.accent-line {
 
 	.past-employers-header:after {
 		font-size: 1.5em;
-		content: "People I've worked with - thanks guys!";
+		content: "People I've worked with (hover the logos)";
 	}
 
 	.future-employers-header:after {
@@ -791,7 +791,7 @@ footer.accent-line {
 
 	.past-employers-header:after {
 		font-size: 1.5em;
-		content: "People I've worked with - thanks guys!";
+		content: "People I've worked with (hover the logos)";
 	}
 
 	.future-employers-header:after {
