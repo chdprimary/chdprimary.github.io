@@ -160,6 +160,10 @@ footer.accent-line {
 	opacity: 0.4;
 }
 
+h4.accent-line {
+	font-size: 1em;
+	opacity: 0.4;
+}
 /*
 	============
 	Namegram Aside
